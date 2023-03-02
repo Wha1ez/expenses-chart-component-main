@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  
+</head>
+<body>
+
+  <main>
+    <section class="balance-section">
+      <div class="texts">
+        <p>My balance</p>
+        <h1 class="balance"> $921.48</h1>
+      </div>
+      
+      <img src="images/logo.svg" alt="" class="logo">
+    </section>
+
+    <section class="chart-section">
+      <h2 class="chart-header">Spending - Last 7 days</h2>
+      <div class="chart">
+        <div class="bar-container">
+          <p class="amount-spent">0.00</p>
+          <div class="bar"></div>
+          <p class="day">mon</p>
+        </div>
+        <div class="bar-container">
+          <p class="amount-spent">0.00</p>
+          <div class="bar"></div>
+          <p class="day">tue</p>
+        </div>
+        <div class="bar-container">
+          <p class="amount-spent">0.00</p>
+          <div class="bar max"></div>
+          <p class="day">wed</p>
+        </div>
+        <div class="bar-container">
+          <p class="amount-spent">0.00</p>
+          <div class="bar"></div>
+          <p class="day">thu</p>
+        </div>
+        <div class="bar-container">
+          <p class="amount-spent">0.00</p>
+          <div class="bar"></div>
+          <p class="day">fri</p>
+        </div>
+        <div class="bar-container">
+          <p class="amount-spent">0.00</p>
+          <div class="bar"></div>
+          <p class="day">sat</p>
+        </div>
+        <div class="bar-container">
+          <p class="amount-spent">0.00</p>
+          <div class="bar"></div>
+          <p class="day">sun</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="month-summary-container">
+        <div class="month-total">
+          <p> Total this month</p>
+          <h1 class="total-amount">$478.33</h1>
+        </div>
+        <div class="percentage-difference">
+          <h3 class="percentage">+2.4%</h3>
+          <p>from last month</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

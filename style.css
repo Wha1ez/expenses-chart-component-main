@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root{
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+}
+
+main{
+    width: 90vw;
+    max-width: 400px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.balance-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Soft-red);
+    padding: 25px 35px 25px 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.texts p{
+    color: var(--Cream);
+}
+
+
+.balance{
+    font-size: clamp(20px, 10vw, 32px);
+    margin-top: 10px;
+    color: var(--Very-pale-orange);
+}
+
+.logo{
+    width: 70px;
+}
+
+
+.chart-section{
+    background-color: var(--Very-pale-orange);
+    padding: 35px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.chart-header{
+    font-size: 25px;
+    margin-bottom: 60px;
+}
+
+.chart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar-container{
+    position: relative;
+    width: calc((100%-150px)/8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.amount-spent{
+    text-align: center;
+    width: 120%;
+    position: relative;
+    left: -5px;
+    margin-bottom: 10px;
+    color: var(--Cream);
+    background-color: var(--Dark-brown);
+    padding: 5px ;
+    border-radius: 5px;
+    font-size: 13px;
+    visibility: hidden;
+}
+
+.visible .amount-spent{
+    visibility: visible;
+}
+
+.bar{
+    height: 10px;
+    background-color: var(--Soft-red);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bar:hover{
+    background-color: hsla(10, 79%, 65%, 0.5);
+    transition: 0.5s;
+}
+
+.max{
+    background-color: var(--Cyan);
+}
+
+.max:hover{
+    background-color: hsla(186, 34%, 60%, 0.5);
+    transition: 0.5s;
+}
+
+.day{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--Medium-brown);
+}
+
+hr{
+    border: 0;
+    background-color: hsla(28, 10%, 53%, 0.3);
+    height: 1px;
+    margin: 30px 0;
+}
+
+.month-summary-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.month-total p{
+    font-size: 14px;
+    color: var(--Medium-brown);
+    margin-bottom: 10px;
+}
+
+.total-amount{
+    font-size: clamp(20px, 10vw, 35px);
+    color: var(--Dark-brown);
+}
+
+.percentage-difference{
+    text-align: right;
+}
+
+.percentage{
+    font-size: 15px;
+    color: var(--Dark-brown);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.percentage-difference p{
+    font-size: 14px;
+    color: var(--Medium-brown);
+}
+
+@media (max-width:380px) {
+    .balance-section{
+        padding: 25px 15px 25px 15px;
+    }
+
+    .chart-section{
+        padding: 35px 15px;
+    }
+
+    .amount-spent{
+        left: -2px;
+        padding: 5px 0px;
+        font-size: 12px;
+    }
+}
